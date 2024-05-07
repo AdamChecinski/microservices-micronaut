@@ -7,5 +7,5 @@ import kotlinx.coroutines.flow.Flow
 @Client("https://stream.wikimedia.org")
 interface SSEClient {
     @Get("/v2/stream/recentchange")
-    fun getStream(): Flow<Map<String,Any>>
+    fun getStream(): Flow<Event>
 }
