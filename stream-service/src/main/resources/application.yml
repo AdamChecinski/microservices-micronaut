@@ -1,0 +1,14 @@
+micronaut:
+  server:
+    port: 8001
+  http:
+    client:
+      connect-timeout: 2s
+      read-timeout: 2s
+      follow-redirects: true
+      pool:
+        enabled: true
+    services:
+      stream-wikimedia:
+        url: ${STREAM_WIKIMEDIA_URL:`https://stream.wikimedia.org/`}
+        path: '/'
